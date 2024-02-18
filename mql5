@@ -1,0 +1,105 @@
+mql5
+// Gold ID Forex Software Code
+// Developer: Forex Robot Easy Team
+// Developer's Site: forexroboteasy.com
+
+// Trade Functions
+int noMartingale(double lotSize) {
+    // Implement no martingale trading strategy
+    // Code logic...
+    return 0;
+}
+
+int gridSupport(double lotSize) {
+    // Implement grid support feature
+    // Code logic...
+    return 0;
+}
+
+int automaticCutLoss(double equity) {
+    // Incorporate automatic cutloss system
+    // Code logic...
+    return 0;
+}
+
+// Performance Optimization
+int optimizePerformance(double deposit) {
+    if (deposit < 1000) {
+        Print('Minimum deposit should be $1000 or more.');
+        return -1;
+    }
+    
+    // Optimize the software for best performance with a minimum deposit of $1000
+    // Code logic...
+    
+    return 0;
+}
+
+// Compatibility
+int verifyCompatibility(string symbol, string[] accountTypes, int leverage) {
+    if (symbol != 'XAUUSD') {
+        Print('Software is only compatible with XAUUSD (GOLD) trading symbol.');
+        return -1;
+    }
+    
+    if (leverage != 500) {
+        Print('Software supports a leverage of 1:500 only.');
+        return -1;
+    }
+    
+    // Test and verify compatibility with different account types
+    // Code logic...
+    
+    return 0;
+}
+
+// Testing and Reliability
+int testSoftware(int startYear, int endYear) {
+    if (endYear - startYear < 4) {
+        Print('Testing period should be at least 4 years.');
+        return -1;
+    }
+    
+    // Thoroughly test the software using real ticks from 2020 to 2023
+    // Code logic...
+    
+    return 0;
+}
+
+// Main function
+int OnInit() {
+    double lotSize = 0.01; // Example lot size
+    double equity = AccountEquity();
+    int startYear = 2020;
+    int endYear = 2023;
+    
+    // Verify compatibility
+    if (verifyCompatibility('XAUUSD', ['Standard', 'Pro', 'Classic', 'ECN', 'RAW', 'Hedging'], 500) != 0) {
+        return -1;
+    }
+    
+    // Optimize performance
+    if (optimizePerformance(1000) != 0) {
+        return -1;
+    }
+    
+    // Test software
+    if (testSoftware(startYear, endYear) != 0) {
+        return -1;
+    }
+    
+    // Execute trade functions
+    if (noMartingale(lotSize) != 0) {
+        return -1;
+    }
+    
+    if (gridSupport(lotSize) != 0) {
+        return -1;
+    }
+    
+    if (automaticCutLoss(equity) != 0) {
+        return -1;
+    }
+    
+    return(INIT_SUCCEEDED);
+}
